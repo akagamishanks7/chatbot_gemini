@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "233291215996",
-    "firebase_url": "https://chatbot-gemini.firebaseio.com",
-    "project_id": "chatbot-gemini",
-    "storage_bucket": "chatbot-gemini.appspot.com"
+    "project_number": "838191367870",
+    "firebase_url": "https://chatbot-gemini-f54a1.firebaseio.com",
+    "project_id": "chatbot-gemini-f54a1",
+    "storage_bucket": "chatbot-gemini-f54a1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:233291215996:android:035ea8cf00f9c181ab85f9",
+        "mobilesdk_app_id": "1:838191367870:android:1460bc5c1bd0c807bbc0ef",
         "android_client_info": {
           "package_name": "com.example.chatbot_gemini"
         }
       },
       "oauth_client": [
         {
-          "client_id": "233291215996-i63mbtbm312m3212otdcmudetqqdfqnn.apps.googleusercontent.com",
+          "client_id": "838191367870-us3vge1at26keifcggednsd38rl8p69c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.chatbot_gemini",
-            "certificate_hash": "b3642a215129f8e57252b14a57fcddf7d1fbf0ba"
+            "certificate_hash": "678d476224acafef04086879caee9522e9e0eb21"
           }
         },
         {
-          "client_id": "233291215996-9vnoj4fpv5me6lj8cgu9fn7eqh68130r.apps.googleusercontent.com",
+          "client_id": "838191367870-68t0ndcckk75tpql28891vaj00jle586.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAwioVNAXpPDy3_XTK71lBcPQi7exlVrTg"
+          "current_key": "AIzaSyCxIp3oK-gF8KqjfHBGn9Nt2wtO81X0V7g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "233291215996-9vnoj4fpv5me6lj8cgu9fn7eqh68130r.apps.googleusercontent.com",
+              "client_id": "838191367870-68t0ndcckk75tpql28891vaj00jle586.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
