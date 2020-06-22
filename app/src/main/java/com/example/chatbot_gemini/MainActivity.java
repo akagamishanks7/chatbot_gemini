@@ -1,9 +1,13 @@
 package com.example.chatbot_gemini;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,11 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int RC_SIGN_IN = 9001;
     GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
+    //RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //relativeLayout = findViewById(R.id.relativeLayout);
+        //relativeLayout.setBackgroundColor(Color.);
 
         //Create a new Google Sign in Object
 
@@ -48,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.signOutButton).setOnClickListener((View.OnClickListener) this);
 
         // Declaring a Firebase Auth Instance
+
         mAuth = FirebaseAuth.getInstance();
 
     }
@@ -68,16 +76,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 // Google Sign In was successful, authenticate with Firebase
+
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
+
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
+
                 Log.w(TAG, "Google sign in failed", e);
+
                 // [START_EXCLUDE]
                 updateUI(null);
                 // [END_EXCLUDE]
@@ -87,6 +100,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void updateUI(FirebaseUser account) {
         //If account==NULL, go to the sign in page
+
+        if(account!=null) {
+            Context context = getApplicationContext();
+            CharSequence text = account.getEmail();
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
 
         //Send to home page
     }

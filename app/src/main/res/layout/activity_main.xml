@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f1f1f1"
     tools:context=".MainActivity">
 
-
-    <com.google.android.gms.common.SignInButton
+    <!--
+    <com.google.android.gms.common.internal.SignInButtonImpl
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signOutButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="68dp"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="344dp" />
+-->
+
+    <ImageView
+        android:contentDescription="Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signInButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="159dp"
+        android:src="@drawable/gem_logo" />
+
+    <com.shobhitpuri.custombuttons.GoogleSignInButton
+    android:id="@+id/signInButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/signOutButton"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="96dp"
+    android:layout_marginEnd="97dp"
+    android:layout_marginBottom="56dp"
+    android:text="@string/google_sign_up"
+    app:isDarkTheme="true" />
 
     <Button
         android:id="@+id/signOutButton"
-        android:layout_width="120dp"
-        android:layout_height="58dp"
-        android:text="Sign Out"/>
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="91dp"
+        android:text="Sign Out"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="493dp" />
 
-</LinearLayout>
+</RelativeLayout>
