@@ -103,14 +103,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(account!=null) {
             Context context = getApplicationContext();
-            CharSequence text = account.getEmail();
+            CharSequence text = "Welcome "+account.getDisplayName();
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+
+            //Send to home page
+
+            Connection C = new Connection(this);
+            C.execute("gemini", "", account.getEmail(), account.getDisplayName());
         }
 
-        //Send to home page
     }
 
     private void firebaseAuthWithGoogle(String idToken) {
@@ -149,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void signOut() {
         // Firebase sign out
         Log.d(TAG, "signOutWithCredential:success");
+
         mAuth.signOut();
 
         // Google sign out
