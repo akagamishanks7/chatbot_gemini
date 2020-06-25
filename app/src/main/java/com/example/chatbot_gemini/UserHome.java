@@ -47,9 +47,11 @@ public class UserHome extends AppCompatActivity implements View.OnClickListener 
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        //Declaring Sign In and Sign Out buttons
+        //Declaring Sign Out button
 
         findViewById(R.id.signOutButtonUser).setOnClickListener((View.OnClickListener) this);
+        findViewById(R.id.contactSupport).setOnClickListener((View.OnClickListener) this);
+        findViewById(R.id.addSS).setOnClickListener((View.OnClickListener) this);
 
         // Declaring a Firebase Auth Instance
 
@@ -63,6 +65,14 @@ public class UserHome extends AppCompatActivity implements View.OnClickListener 
         int i = v.getId();
         if(i == R.id.signOutButtonUser) {
             signOut();
+        }
+        else if(i == R.id.contactSupport)
+        {
+            //get the details of complaint and create a connection
+        }
+        else if (i == R.id.addSS)
+        {
+
         }
     }
 

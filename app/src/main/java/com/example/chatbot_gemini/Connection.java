@@ -73,7 +73,7 @@ public class Connection extends AsyncTask <String, Void, String> {
         email1=email;
 
         //IP : 192.168.1.4
-        String connstr = "http://192.168.1.4:8080/login.php";
+        String connstr = "http://10.0.2.2:8080/login.php";
 
         try {
             URL url = new URL(connstr);
