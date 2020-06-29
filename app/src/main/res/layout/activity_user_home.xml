@@ -7,10 +7,10 @@
     tools:context=".UserHome">
 
 
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:layout_width="275dp"
-        android:layout_height="50dp"
-
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/description"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"

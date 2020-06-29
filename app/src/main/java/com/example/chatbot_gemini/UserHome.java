@@ -2,12 +2,16 @@ package com.example.chatbot_gemini;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatSpinner;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -56,8 +60,35 @@ public class UserHome extends AppCompatActivity implements View.OnClickListener 
         // Declaring a Firebase Auth Instance
 
         mAuth = FirebaseAuth.getInstance();
+/*
+        //drop-down menu
+
+        final Spinner category = findViewById(R.id.category);
+        String[] categoryItems = new String[]{"Select a Category", "Login Issue", "Network Issue", "Other Query"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, categoryItems);
+        category.setAdapter(adapter);
 
 
+        category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                String selectedItem = parent.getItemAtPosition(position).toString();
+
+                //toast
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, selectedItem, duration);
+                toast.show();
+            }
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                ArrayAdapter myAdap = (ArrayAdapter) category.getAdapter();
+                int spinnerPosition = myAdap.getPosition("Select a Category");
+                category.setSelection(spinnerPosition);
+            }
+        });
+*/
     }
 
 
@@ -72,7 +103,7 @@ public class UserHome extends AppCompatActivity implements View.OnClickListener 
         }
         else if (i == R.id.addSS)
         {
-
+            //upload screenshot to the server
         }
     }
 
